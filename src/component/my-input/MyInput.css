@@ -1,0 +1,35 @@
+.MyInput {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.MyInput-input {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 24px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    outline-width: 0;
+    font-size: 16px;
+    color: var(--main-text-color);
+}
+
+.MyInput-input::placeholder {
+    color: var(--second-text-color);
+    font-style: italic;
+}
+
+.MyInput-input:focus {
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+
+.MyInput-error {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 16px;
+}
