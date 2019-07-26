@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { youtubeValidator } from './validators/youtube-url.validator';
 import MyInput from './component/my-input/MyInput';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
         <form className="App-form">
           <MyInput
             placeholder={'Введите или скопируйте валидный youtube URL'}
+            validator={youtubeValidator}
           />
         </form>
     </div>
