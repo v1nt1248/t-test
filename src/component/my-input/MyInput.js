@@ -6,17 +6,20 @@ class MyInput extends React.Component {
         super(props);
         this.state = {
             url: '',
+            error: null,
             valid: false,
             touched: false,
         };
     }
 
     handleInput = (e) => {
-        let { valid, url } = this.props.validator(e.target.value);
+        let { url, valid, error } = this.props.validator(e.target.value);
         this.setState({
-            valid,
             url,
+            valid,
+            error,
         });
+        this.props.input({url, valid, error });
     }
 
     handleFocus = () => {
@@ -28,7 +31,8 @@ class MyInput extends React.Component {
     }
 
     render() {
-        let className = `MyInput-input ${this.state.valid ? 'isValid' : 'isInvaid'} ${this.state.touched ? 'isTouched' : 'unTouched'}`;
+        let className = `MyInput-input ${this.state.valid ? 'isValid' : 'isInvalid'} ${this.state.touched ? 'isTouched' : 'isUntouched'}`;
+        let errorMessage = this.state.touched && !this.state.valid && this.state.error;
         return (
             <div className="MyInput">
                 <input
@@ -39,6 +43,11 @@ class MyInput extends React.Component {
                     onFocus={this.handleFocus}
                 />
                 <div className="MyInput-error">
+                    {errorMessage &&
+                        <span className="MyInput-error__text">
+                            { errorMessage }
+                        </span>
+                    }
                 </div>
             </div>
         )
