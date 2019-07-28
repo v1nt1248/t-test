@@ -5,21 +5,34 @@ class MyInput extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            url: '',
+            value: '',
             error: null,
-            valid: false,
+            valid: true,
             touched: false,
         };
     }
 
     handleInput = (e) => {
-        let { url, valid, error } = this.props.validator(e.target.value);
+        let currentValue = e.target.value,
+        currentValid = 'true',
+        currentError = null;
+        if (this.props.validator) {
+            let { valid, error } = this.props.validator(e.target.value);
+            currentValid = valid;
+            currentError = error;
+        }
         this.setState({
-            url,
-            valid,
-            error,
+            value: currentValue,
+            valid: currentValid,
+            error: currentError,
         });
-        this.props.input({url, valid, error });
+        if (this.props.change) {
+            this.props.change({
+                value: currentValue,
+                valid: currentValid,
+                error: currentError,
+            });
+        }
     }
 
     handleFocus = () => {
@@ -33,13 +46,15 @@ class MyInput extends React.Component {
     render() {
         let className = `MyInput-input ${this.state.valid ? 'isValid' : 'isInvalid'} ${this.state.touched ? 'isTouched' : 'isUntouched'}`;
         let errorMessage = this.state.touched && !this.state.valid && this.state.error;
+
         return (
             <div className="MyInput">
                 <input
                     type="text"
                     className={className}
                     placeholder={this.props.placeholder}
-                    onInput={this.handleInput}
+                    value={this.state.value}
+                    onChange={this.handleInput}
                     onFocus={this.handleFocus}
                 />
                 <div className="MyInput-error">

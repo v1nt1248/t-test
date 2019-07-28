@@ -1,0 +1,10 @@
+.MyYoutubeSearch {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.MyYoutubeSearch_search {
+    width: 480px;
+}
