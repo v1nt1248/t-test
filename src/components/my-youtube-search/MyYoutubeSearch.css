@@ -3,8 +3,46 @@
     box-sizing: border-box;
     width: 100%;
     padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.MyYoutubeSearch_search-block {
+    position: relative;
+    box-sizing: border-box;
+    width: 480px;
 }
 
 .MyYoutubeSearch_search {
-    width: 480px;
+    width: 100%;
+}
+
+.MyYoutubeSearch_search-results {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.MyYoutubeSearch_search-item {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.MyYoutubeSearch_player-block {
+    position: relative;
+    box-sizing: border-box;
+    width: calc(100% - 500px);
+    padding-bottom: 75%;
+}
+
+.MyYoutubeSearch_player-wrapper {
+    position: aabsolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
