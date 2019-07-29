@@ -10,7 +10,7 @@
     cursor: pointer;
 }
 
-.MyYoutubeSeacrhItem_preview {
+.MyYoutubeSeacrhItem__preview {
     position: relative;
     box-sizing: border-box;
     width: 160px;
@@ -21,7 +21,7 @@
     background-size: cover;
 }
 
-.MyYoutubeSeacrhItem_info {
+.MyYoutubeSeacrhItem__info {
     position: relative;
     box-sizing: border-box;
     width: calc(100% - 180px);
@@ -31,12 +31,12 @@
     align-items: flex-start;
 }
 
-.MyYoutubeSeacrhItem_info-title {
+.MyYoutubeSeacrhItem__info-title {
     margin: 0 0 10px 0;
     font-size: 14px;
 }
 
-.MyYoutubeSeacrhItem_info-description {
+.MyYoutubeSeacrhItem__info-description {
     font-size: 11px;
     color: darkslategray;
     text-align: left;

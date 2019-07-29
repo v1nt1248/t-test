@@ -2,14 +2,14 @@
   text-align: center;
 }
 
-.App-content {
+.App__content {
   position: relative;
   box-sizing: border-box;
   width: 480px;
   padding: 0 20px;
 }
 
-.App-form__block-title code {
+.App__block-title code {
   color: grey;
   font-style: italic;
 }

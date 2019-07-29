@@ -3,4 +3,36 @@
     box-sizing: border-box;
     width: 100%;
     padding-bottom: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.MyYoutubePlayer__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.MyYoutubePlayer__content iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.MyYoutubePlayer__placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    font-size: 16px;
+    font-weight: bold;
 }

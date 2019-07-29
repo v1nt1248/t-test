@@ -4,7 +4,7 @@
     width: 100%;
 }
 
-.MyInput-input {
+.MyInput__input {
     position: relative;
     box-sizing: border-box;
     width: 100%;
@@ -18,20 +18,20 @@
     color: var(--main-text-color);
 }
 
-.MyInput-input::placeholder {
+.MyInput__input::placeholder {
     color: var(--second-text-color);
     font-style: italic;
 }
 
-.MyInput-input:focus {
+.MyInput__input:focus {
     border-bottom-color: rgba(0, 0, 0, 0.2);
 }
 
-.MyInput-input.isTouched.isInvalid {
+.MyInput__input.isTouched.isInvalid {
     border-bottom-color: red;
 }
 
-.MyInput-error {
+.MyInput__error {
     position: relative;
     box-sizing: border-box;
     width: 100%;
@@ -39,7 +39,7 @@
     text-align: left;
 }
 
-.MyInput-error__text {
+.MyInput__error-text {
     font-style: italic;
     font-size: 12px;
     line-height: 16px;

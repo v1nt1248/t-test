@@ -22,9 +22,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-          <div className="App-content">
+          <div className="App__content">
             <h3>Test</h3>
-            <h4 className="App-form__block-title">
+            <h4 className="App__block-title">
               <code>MyInput</code> component
             </h4>
             <MyInput
@@ -33,7 +33,7 @@ class App extends React.Component {
               change={this.onInput}
             />
             <div>
-              <h4 className="App-form__block-title">
+              <h4 className="App__block-title">
                 Результат:
               </h4>
               { JSON.stringify(this.state.inputRes, null, 2) }
@@ -41,7 +41,7 @@ class App extends React.Component {
         </div>
         <br/><br/>
 
-        <h4 className="App-form__block-title">
+        <h4 className="App__block-title">
           <code>MyYoutubeSearch</code> component
         </h4>
         <MyYoutubeSearch/>

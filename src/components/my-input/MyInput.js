@@ -44,7 +44,7 @@ class MyInput extends React.Component {
     }
 
     render() {
-        let className = `MyInput-input ${this.state.valid ? 'isValid' : 'isInvalid'} ${this.state.touched ? 'isTouched' : 'isUntouched'}`;
+        let className = `MyInput__input ${this.state.valid ? 'isValid' : 'isInvalid'} ${this.state.touched ? 'isTouched' : 'isUntouched'}`;
         let errorMessage = this.state.touched && !this.state.valid && this.state.error;
 
         return (
@@ -57,9 +57,9 @@ class MyInput extends React.Component {
                     onChange={this.handleInput}
                     onFocus={this.handleFocus}
                 />
-                <div className="MyInput-error">
+            <div className="MyInput__error">
                     {errorMessage &&
-                        <span className="MyInput-error__text">
+                        <span className="MyInput__error-text">
                             { errorMessage }
                         </span>
                     }

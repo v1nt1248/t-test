@@ -26,7 +26,6 @@ class MyYoutubeSearch extends React.Component {
     }
 
     onSelect = (e) => {
-        console.log('S: ', e);
         this.setState({
             selected: e.id.videoId,
         });
@@ -36,17 +35,17 @@ class MyYoutubeSearch extends React.Component {
         const videoList = this.state.videoList || [];
         return (
             <div className="MyYoutubeSearch">
-                <div className="MyYoutubeSearch_search-block">
-                    <div className="MyYoutubeSearch_search">
+                <div className="MyYoutubeSearch__search-block">
+                    <div className="MyYoutubeSearch__search">
                         <MyInput
                             placeholder="Введите ключевое слово для поиска видео"
                             change={debounce(this.onInput, 250)}
                         />
 
-                        <div className="MyYoutubeSearch_search-results">
+                    <div className="MyYoutubeSearch__search-results">
                             {
                                 videoList.map((item) =>
-                                    <div className="MyYoutubeSearch_search-item" key={item.id.videoId}>
+                                    <div className="MyYoutubeSearch__search-item" key={item.id.videoId}>
                                         <MyYoutubeSearchItem data={item} select={this.onSelect}/>
                                     </div>
                                 )
@@ -55,8 +54,8 @@ class MyYoutubeSearch extends React.Component {
                     </div>
                 </div>
 
-                <div className="MyYoutubeSearch_player-block">
-                    <div className="MyYoutubeSearch_player-wrapper">
+                <div className="MyYoutubeSearch__player-block">
+                    <div className="MyYoutubeSearch__player-wrapper">
                         <MyYoutubePlayer videoId={this.state.selected}/>
                     </div>
                 </div>
